@@ -1,0 +1,53 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-input {
+  padding: 12px;
+  border: 1px solid var(--border-secondary, #dddddd);
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: var(--bg-secondary, #f8f9fa);
+  color: var(--text-primary, #333333);
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.task-button-container {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.task-submit {
+  padding: 10px 20px;
+  background-color: var(--color-success, #28a745);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+.task-submit:hover {
+  background-color: var(--color-success-hover, #218838);
+}
+
+.task-cancel {
+  padding: 10px 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.task-cancel:hover {
+  background-color: #5a6268;
+}

@@ -1,70 +1,133 @@
-# Getting Started with Create React App
+# Interactive Weekly Agenda
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, interactive weekly agenda web app built with React. It features task management, role selection, theme switching (light/dark), and language switching (Spanish/English). Designed for students, teachers, administrators, and parents.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- **Task Management**: Add, view, and manage tasks for each day of the week.
+- **Role Selection**: Choose your role (Administrator, User, Guest) for a personalized experience.
+- **Theme Switcher**: Toggle between light and dark mode.
+- **Language Switcher**: Instantly switch between English and Spanish.
+- **Responsive Design**: Works on desktop and mobile.
+- **Modular CSS**: Clean, maintainable, and themeable styles.
+- **Unit Testing**: All main components are covered by Jest and React Testing Library.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🗂️ Folder Structure
 
-### `npm test`
+```text
+interactive-weekly-agenda/
+├── public/
+├── src/
+│   ├── components/
+│   │   ├── AppRoutes.jsx
+│   │   ├── AppRoutes.test.jsx
+│   │   ├── ChangeLanguage.jsx
+│   │   ├── ChangeLanguage.test.jsx
+│   │   ├── RoleSelector.jsx
+│   │   ├── RoleSelector.test.jsx
+│   │   ├── TaskCard.jsx
+│   │   ├── TaskCard.test.jsx
+│   │   ├── TaskForm.jsx
+│   │   ├── TaskForm.test.jsx
+│   │   ├── TaskListModal.jsx
+│   │   ├── TaskListModal.test.jsx
+│   │   ├── TaskModal.jsx
+│   │   ├── TaskModal.test.jsx
+│   │   ├── ThemeSwitcher.jsx
+│   │   ├── ThemeSwitcher.test.jsx
+│   │   ├── WeekBoard.jsx
+│   │   ├── WeekBoard.test.jsx
+│   │   └── index.jsx
+│   ├── context/
+│   │   └── AppContext.jsx
+│   ├── pages/
+│   │   └── Dashboard.jsx
+│   ├── styles/
+│   │   ├── base/
+│   │   ├── components/
+│   │   ├── themes/
+│   │   ├── utilities/
+│   │   └── index.css
+│   └── App.jsx
+├── package.json
+└── README.md
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🧩 Component Architecture
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```mermaid
+graph TD;
+  App-->AppRoutes;
+  AppRoutes-->|role not selected|RoleSelector;
+  AppRoutes-->|role selected|Dashboard;
+  Dashboard-->ThemeSwitcher;
+  Dashboard-->ChangeLanguage;
+  Dashboard-->WeekBoard;
+  WeekBoard-->TaskCard;
+  TaskCard-->TaskModal;
+  TaskCard-->TaskListModal;
+  TaskModal-->TaskForm;
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎨 Theme & Language System
 
-### `npm run eject`
+- **Theme**: Uses CSS variables and the `data-theme` attribute for light/dark mode. All styles are modular and theme-aware.
+- **Language**: All UI text is dynamically switched between English and Spanish. Only the visible UI text changes; all code, comments, and variables are in English.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🛠️ How to Run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+2. **Start the development server:**
+   ```bash
+   npm start
+   ```
+3. **Open in your browser:**
+   [http://localhost:3000](http://localhost:3000)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🧪 Running Tests
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+All main components are covered by unit tests using Jest and React Testing Library.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To run all tests:
+```bash
+npm test
+```
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📝 Contributing
 
-### Analyzing the Bundle Size
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -am 'Add new feature'`)
+4. Push to the branch (`git push origin feature/your-feature`)
+5. Create a new Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 📄 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This project is licensed under the MIT License.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 📚 Additional Notes
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- All code, comments, and variable names are in English for maintainability.
+- UI text is available in both English and Spanish, switchable via the language toggle.
+- For more details on the CSS structure, see [`src/styles/README.md`](src/styles/README.md).

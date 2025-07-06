@@ -1,0 +1,96 @@
+/* Variables CSS para temas */
+:root {
+  /* Colores base - Tema Claro */
+  --color-primary: #007bff;
+  --color-primary-hover: #0056b3;
+  --color-success: #28a745;
+  --color-success-hover: #218838;
+  --color-danger: #dc3545;
+  --color-warning: #ffc107;
+  --color-info: #17a2b8;
+  
+  /* Colores de fondo */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #e9ecef;
+  
+  /* Colores de texto */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --text-light: #ffffff;
+  
+  /* Colores de bordes */
+  --border-primary: #e0e0e0;
+  --border-secondary: #dddddd;
+  --border-focus: #007bff;
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.2);
+  
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  
+  /* Bordes redondeados */
+  --border-radius-sm: 4px;
+  --border-radius-md: 6px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+  
+  /* Tipografía */
+  --font-family: 'Arial', sans-serif;
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 24px;
+    --bg-card: #ffffff;
+  --text-main: #333333;
+  --border-color: #e0e0e0;
+  --hover-bg: #f0f0f0;
+    --border-error: #ff4d4f; /* rojo para errores o destacar */
+}
+
+/* Tema Oscuro */
+[data-theme="dark"] {
+  /* Colores de fondo */
+  --bg-primary: #1a1a1a;
+  --bg-secondary: #2d2d2d;
+  --bg-tertiary: #404040;
+  
+  /* Colores de texto */
+  --text-primary: #ffffff;
+  --text-secondary: #cccccc;
+  --text-muted: #b0b0b0;
+  --text-light: #ffffff;
+  
+  /* Colores de bordes */
+  --border-primary: #404040;
+  --border-secondary: #555555;
+  --border-focus: #007bff;
+  
+  /* Sombras ajustadas para modo oscuro */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 25px rgba(0,0,0,0.4);
+  
+
+  --bg-card: #2d2d2d;
+  --text-main: #ffffff;
+  --border-color: #404040;
+  --hover-bg: #333333;
+   --border-error: #ff6b6b; /* un rojo más visible en oscuro */
+  
+} 

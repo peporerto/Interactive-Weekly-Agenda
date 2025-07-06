@@ -1,0 +1,5 @@
+@import './ModalBase.css';
+
+.modal-box {
+  max-width: 500px; /* Adjusted for task list modal */
+}

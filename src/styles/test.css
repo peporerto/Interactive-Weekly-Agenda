@@ -1,0 +1,17 @@
+/* Archivo de prueba para verificar estilos */
+.test-styles {
+  background-color: red !important;
+  color: white !important;
+  padding: 20px !important;
+  margin: 20px !important;
+  border: 3px solid blue !important;
+}
+
+/* Verificar que las variables CSS funcionen */
+.test-variables {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 2px solid var(--border-primary);
+  padding: var(--spacing-md);
+  margin: var(--spacing-md);
+} 
